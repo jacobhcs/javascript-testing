@@ -1,10 +1,9 @@
 var block = document.querySelector('#removethis');
 var image = document.querySelector('#photo');
 var select = document.querySelector('#menu');
-var degree = document.querySelector('.degree')
-var tempSelect = document.querySelector('#measurements')
-var fahrenheitTemp = degree.innerText;
-
+var degrees = document.querySelectorAll('.degree');
+var tempSelect = document.querySelector('#measurements');
+var fahrenheitTemps = Array.from(degrees).map(deg => deg.innerText);
 
 function removeBlock() {
   block.remove();
@@ -27,7 +26,7 @@ function releaseMe(element) {
 }
 
 var image = document.querySelector('#photo');
-var select = document.querySelector('#menu')
+var select = document.querySelector('#menu');
 
 function imageChange() {
   image.src = select.value;
@@ -35,9 +34,12 @@ function imageChange() {
 
 function changeMeasure() {
   if (tempSelect.value == 'C') {
-    degree.innerText = Math.floor((degree.innerText - 32) * 5 / 9);
+    degrees.forEach((degree, index) => {
+      degree.innerText = Math.floor((parseFloat(fahrenheitTemps[index]) - 32) * 5 / 9);
+    });
   } else if (tempSelect.value == 'F') {
-    degree.innerText = fahrenheitTemp;
+    degrees.forEach((degree, index) => {
+      degree.innerText = fahrenheitTemps[index];
+    });
   }
-  console.log(degree.innerText);
 }
