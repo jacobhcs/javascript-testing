@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>JS Test</h1>
+    <button onclick="removeBlock()">press me</button>
+    <p>press this button to remove the bottom element.</p>
+    <div onmouseup="releaseMe(this)" onmousedown="clickMe(this)" onmouseout="out(this)" onmouseover="over(this)"
+      id="removethis" class="block"></div>
+    <p>click on the box to send alert message.</p>
+    <label for="menu">Select Menu Options</label>
+    <select onchange="imageChange()" name="change-pics" id="menu">
+      <option value="static\statue.jpg">Statue</option>
+      <option value="static\car.jpg">Car</option>
+      <option value="static\cheetah.jpg">Cheetah</option>
+    </select>
+    <img id="photo" src="static/statue.jpg" alt="marble statue">
+    <label for="measurements">Change weather measurements to fahrenheit or celsius.</label>
+    <select onchange="changeMeasure()" id="measurements">
+      <option value="F">Fahrenheit</option>
+      <option value="C">Celcius</option>
+    </select>
+    <div class="weather-card">
+      <p class="day">Today</p>
+      <img class="sun" src="static/some_sun.png" alt="sunny">
+      <p class="temperature"><span class="degree">70</span>&deg</p>
+    </div>
+    <div class="weather-card">
+      <p class="day">Today</p>
+      <img class="sun" src="static/some_sun.png" alt="sunny">
+      <p class="temperature"><span class="degree">90</span>&deg</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
