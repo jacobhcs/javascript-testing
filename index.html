@@ -10,12 +10,17 @@
 
 <body>
   <div class="container">
+
     <h1>JS Test</h1>
-    <button onclick="removeBlock()">press me</button>
+
+    <!-- messing with changing the style of a div element with the shape of a box -->
     <p>press this button to remove the bottom element.</p>
+    <button onclick="removeBlock()">press me</button>
     <div onclick="alert('You clicked the bux')" onmouseup="releaseMe(this)" onmousedown="clickMe(this)"
       onmouseout="out(this)" onmouseover="over(this)" id="removethis" class="block"></div>
     <p>click on the box to send alert message.</p>
+
+    <!-- changes the image displayed when you select a new value -->
     <label for="menu">Select Menu Options</label>
     <select onchange="imageChange()" name="change-pics" id="menu">
       <option value="static\statue.jpg">Statue</option>
@@ -23,6 +28,8 @@
       <option value="static\cheetah.jpg">Cheetah</option>
     </select>
     <img id="photo" src="static/statue.jpg" alt="marble statue">
+
+    <!-- converting temperature measurements when selecting a new value -->
     <label for="measurements">Change weather measurements to fahrenheit or celsius.</label>
     <select onchange="changeMeasure()" id="measurements">
       <option value="F">Fahrenheit</option>
@@ -38,15 +45,22 @@
       <img class="sun" src="static/some_sun.png" alt="sunny">
       <p class="temperature"><span class="degree">90</span>&deg</p>
     </div>
+
+    <!-- typing in the searchbar and clicking "go" will send an alert message with the value you typed in the search box -->
     <p>type in searchbar and click go to return alert with value inside</p>
     <input type="text" name="searchbar" id="searchbar" placeholder="search">
     <button onclick="alertValue()" class="searchbutton" for="searchbar">GO</button>
+
+    <!-- pressing the button will remove the button. messing with using this keyword. -->
     <p>Press the button to remove it from the page.</p>
     <button onclick="removeButton(this)" class="removebtn">Remove Me</button>
+
+    <!-- increasing the count of a counter using image sources -->
     <p class="liketext">Click the images to increse the counter.</p>
-    <img onclick="countUp()" id="upvote" src="./static/up-arrow.png" alt="upvote" height="50">
+    <img style="cursor: pointer;" onclick="countUp()" id="upvote" src="./static/up-arrow.png" alt="upvote" height="50">
     <p class="counter">0</p>
-    <img id="downvote" src="./static/down-arrow.png" alt="downvote" height="50">
+    <img style="cursor: pointer;" onclick="countDown()" id="downvote" src="./static/down-arrow.png" alt="downvote"
+      height="50">
   </div>
   <script src="script.js"></script>
 </body>
