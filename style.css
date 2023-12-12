@@ -12,6 +12,7 @@
    margin: 0% auto;
    text-align: center;
    padding: 10px;
+   height: 2000px;
  }
 
  button {
@@ -21,7 +22,7 @@
  }
 
  p {
-   display: inline-block;
+   display: block;
    text-align: center;
  }
 
@@ -76,4 +77,8 @@
    display: block;
    margin-bottom: 30px;
    margin-top: 20px;
+ }
+
+ .liketext {
+  margin-top: 14px;
  }

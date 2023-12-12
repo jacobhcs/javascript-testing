@@ -13,8 +13,8 @@
     <h1>JS Test</h1>
     <button onclick="removeBlock()">press me</button>
     <p>press this button to remove the bottom element.</p>
-    <div onclick="alert('You clicked the bux')" onmouseup="releaseMe(this)" onmousedown="clickMe(this)" onmouseout="out(this)" onmouseover="over(this)"
-      id="removethis" class="block"></div>
+    <div onclick="alert('You clicked the bux')" onmouseup="releaseMe(this)" onmousedown="clickMe(this)"
+      onmouseout="out(this)" onmouseover="over(this)" id="removethis" class="block"></div>
     <p>click on the box to send alert message.</p>
     <label for="menu">Select Menu Options</label>
     <select onchange="imageChange()" name="change-pics" id="menu">
@@ -38,7 +38,15 @@
       <img class="sun" src="static/some_sun.png" alt="sunny">
       <p class="temperature"><span class="degree">90</span>&deg</p>
     </div>
-    <p>testing branches out</p>
+    <p>type in searchbar and click go to return alert with value inside</p>
+    <input type="text" name="searchbar" id="searchbar" placeholder="search">
+    <button onclick="alertValue()" class="searchbutton" for="searchbar">GO</button>
+    <p>Press the button to remove it from the page.</p>
+    <button onclick="removeButton(this)" class="removebtn">Remove Me</button>
+    <p class="liketext">Click the images to increse the counter.</p>
+    <img onclick="countUp()" id="upvote" src="./static/up-arrow.png" alt="upvote" height="50">
+    <p class="counter">0</p>
+    <img id="downvote" src="./static/down-arrow.png" alt="downvote" height="50">
   </div>
   <script src="script.js"></script>
 </body>

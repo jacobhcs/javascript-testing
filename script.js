@@ -1,9 +1,10 @@
 var block = document.querySelector('#removethis');
 var image = document.querySelector('#photo');
 var select = document.querySelector('#menu');
-var degree = document.querySelectorAll('.degree')
-var tempSelect = document.querySelector('#measurements')
-
+var degree = document.querySelectorAll('.degree');
+var tempSelect = document.querySelector('#measurements');
+var searchbutton = document.querySelector('.searchbutton');
+var searchbar = document.querySelector('#searchbar');
 
 
 function removeBlock() {
@@ -34,10 +35,10 @@ function imageChange() {
 }
 
 function changeMeasure() {
-  var fahrenheitTemp = ['70','90'];
+  var fahrenheitTemp = ['70', '90'];
   if (tempSelect.value == 'C') {
     for (var i = 0; i < degree.length; i++) {
-      fahrenheitTemp.push(degree[i].innerText);
+      // fahrenheitTemp.push(degree[i].innerText);
       degree[i].innerText = Math.floor((degree[i].innerText - 32) * 5 / 9);
       console.log(degree[i].innerText);
     }
@@ -47,4 +48,21 @@ function changeMeasure() {
       console.log(degree[x].innerText);
     }
   }
+}
+
+function alertValue() {
+  alert(`Searching for "${searchbar.value}"`)  
+}
+
+var removebtn = document.querySelector('.removebtn');
+
+function removeButton(element) {
+  element.remove()
+}
+
+var counterstart = document.querySelector('counter')
+var count = 0;
+
+function countUp(){
+  counterstart.innerText = count++
 }
