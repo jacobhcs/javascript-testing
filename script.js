@@ -70,19 +70,17 @@ function removeButton(element) {
 }
 
 // this is grabbing the p.counter element from the element to modify its inner text value.
-var counterstart = document.querySelector('.counter')
+// var counterstart = document.querySelector('.counter')
 
 // this will be our counter that increases or decreases by 1 and will be used to change the inner text of the counterstart variable.
-var count = 0;
+// var count = 0;
 
 // this function will INCREASE the count of the counter by 1.
-function countUp(){
-  count++;
-  counterstart.innerText = count;
+function countUp(element){
+  element.innerText++;
 }
 
 // this function will LOWER the count of the counter by 1.
-function countDown(){
-  count--;
-  counterstart.innerText = count;
+function countDown(element){
+  element.innerText--;
 }

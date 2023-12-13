@@ -49,7 +49,7 @@
     <!-- typing in the searchbar and clicking "go" will send an alert message with the value you typed in the search box -->
     <p>type in searchbar and click go to return alert with value inside</p>
     <input type="text" name="searchbar" id="searchbar" placeholder="search">
-    <button onclick="alertValue()" class="searchbutton" for="searchbar">GO</button>
+    <button onclick="alert('Searching For: ' + searchbar.value)" class="searchbutton" for="searchbar">GO</button>
 
     <!-- pressing the button will remove the button. messing with using this keyword. -->
     <p>Press the button to remove it from the page.</p>
@@ -57,9 +57,9 @@
 
     <!-- increasing the count of a counter using image sources -->
     <p class="liketext">Click the images to increse the counter.</p>
-    <img style="cursor: pointer;" onclick="countUp()" id="upvote" src="./static/up-arrow.png" alt="upvote" height="50">
-    <p class="counter">0</p>
-    <img style="cursor: pointer;" onclick="countDown()" id="downvote" src="./static/down-arrow.png" alt="downvote"
+    <img style="cursor: pointer;" onclick="countUp(counter)" id="upvote" src="./static/up-arrow.png" alt="upvote" height="50">
+    <p id="counter">0</p>
+    <img style="cursor: pointer;" onclick="countDown(counter)" id="downvote" src="./static/down-arrow.png" alt="downvote"
       height="50">
   </div>
   <script src="script.js"></script>
